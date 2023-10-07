@@ -4,11 +4,8 @@ const nextConfig = {
 };
 
 module.exports = {
-  // Other Next.js configuration options...
-  nextConfig,
+  ...nextConfig, // Spread the Next.js configuration settings
   images: {
     domains: ["links.papareact.com", "flagcdn.com", "upload.wikimedia.org"],
   },
-
-  // Other Next.js configuration options...
 };
