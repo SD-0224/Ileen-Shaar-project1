@@ -1,0 +1,151 @@
+main {
+  padding: 0;
+  padding-bottom: 5vh;
+  height: 100vh;
+  background-color: var(--bg_body);
+}
+
+.detail-content {
+  position: relative;
+}
+
+.details {
+  background-color: #333333;
+  padding: 3vh 3vh 1vh 20vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.category {
+  color: var(--brand-secondary);
+  margin: 0;
+  font-size: 1.3vw;
+}
+
+.topic {
+  font-weight: 700;
+  color: #dddddd;
+  margin: 0;
+}
+
+.rating {
+  display: flex;
+  font-size: 65%;
+}
+
+.rating ion-icon {
+  color: orange;
+}
+
+.lang-description {
+  color: #dddddd;
+  max-width: 40vw;
+  font-size: 1.3vw;
+  margin-top: 3vh;
+}
+
+.detailsCard-container {
+  background-color: #ffffff;
+  position: absolute;
+  left: 63vw;
+  max-width: 20vw;
+  top: 10%;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.card-info {
+  max-width: 20vw;
+}
+
+.lang-author {
+  display: flex;
+  align-items: center;
+}
+
+.language,
+.by,
+.author-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2vw;
+  color: #333333;
+}
+
+.by {
+  margin: 0 0.5vw;
+  font-weight: 700;
+}
+
+.author-name {
+  color: var(--brand-primary);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.favourites-container {
+  border: 1px solid #dddddd;
+  padding: 3% 10% 3% 10%;
+  max-width: 13vw;
+  font-size: 1vw;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.favourites-container p:first-of-type {
+  font-weight: 700;
+}
+
+.favourites-container p:nth-of-type(2) {
+  text-align: center;
+  color: #dddddd;
+}
+
+.favourites-container button {
+  background-color: var(--brand-secondary);
+  width: 15vw;
+  font-size: 1.3vw;
+  padding: 7%;
+  color: #f0f9ff;
+}
+
+.subtopics {
+  width: 40vw;
+  margin-left: 20vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  background-color: var(--bg_default);
+}
+
+.subtopics p {
+  border: 1px solid var(--lines-color);
+  font-size: 1.2vw;
+  border: 1px solid var(--lines-color);
+  padding: 3% 0 3% 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.subtopics p:first-of-type {
+  padding-left: 2.2vw;
+  font-weight: 700;
+  font-size: 1.5vw;
+}
+
+.subtopics ion-icon {
+  color: var(--brand-secondary);
+  padding-left: 2vw;
+  padding-right: 1vw;
+  font-size: 2vw;
+}

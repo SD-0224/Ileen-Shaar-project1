@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="light-colors.css" id="colorscheme">
+    <link rel="stylesheet" href="index.css" />
+    
+    <title>TAP-Project1</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="header">
+        <a>Web Topics</a>
+        <div>
+          <button class="headerButton" id="darkModeToggle">
+            <ion-icon name="moon-outline"></ion-icon
+            ><span class="button-text">Dark Mode</span>
+          </button>
+          <button class="headerButton" id="favourites">
+            <ion-icon name="heart-outline"></ion-icon
+            ><span class="button-text">Favourites</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Introduction Section -->
+
+    <div class="introduction-section">
+      <div class="green-triangle"></div>
+      <div class="blue-triangle"></div>
+      <div class="welcome-section">
+        <h1>Welcome to our website!</h1>
+        <h2>We have a new design that's fresh, modern, and easy to use.</h2>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <main>
+      <form action="" class="search-form">
+        <div class="search-bar">
+          <button type="submit">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+          <input type="text" placeholder="Search the website..." />
+        </div>
+
+        <div class="dropDown">
+          <button class="sort-by">
+            <label>Sort By:</label>
+            <select name="sort">
+              <option value="Default">Default</option>
+            </select>
+          </button>
+
+          <button class="filter-by">
+            <label>Filter By:</label>
+            <select name="filter">
+              <option value="Default">Default</option>
+            </select>
+          </button>
+        </div>
+      </form>
+
+      <div class="cards-container">
+      
+        </div>
+
+        <section class="favourites-section" id="favourites-section">
+            <div>My Favourite Topics</div>
+            <div class="favourite-cards-container">
+              <div class="favourite-cards">
+                <img src="logos/ajax.gif" alt="" />
+                <p>HTML</p>
+                <div class="favourite-cards-star">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+          </div>
+
+          <div class="favourite-cards">
+            <img src="logos/analytics.png" alt="" />
+            <p>HTML</p>
+            <div class="favourite-cards-star">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+      </div>
+            </div>
+            
+        </section>
+
+        <footer>
+          Developed with <ion-icon name="heart"></ion-icon> <span>c</span> 2023
+        </footer>
+
+      </div>
+    </main>
+    <script>
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const colorschemeLink = document.getElementById('colorscheme');
+  
+      darkModeToggle.addEventListener('click', () => {
+        if (colorschemeLink.getAttribute('href') === 'light-colors.css') {
+          colorschemeLink.setAttribute('href', 'dark-colors.css');
+        } else {
+          colorschemeLink.setAttribute('href', 'light-colors.css');
+        }
+      });
+    </script>
+
+<script>
+  const favouritesButton = document.getElementById('favourites');
+
+const favouritesSection = document.getElementById('favourites-section');
+
+favouritesButton.addEventListener('click', () => {
+  if (favouritesSection.style.display === 'none' || favouritesSection.style.display === '') {
+    favouritesSection.style.display = 'flex';
+  } else {
+    favouritesSection.style.display = 'none';
+  }
+});
+
+</script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('data/topics.json')
+          .then(response => response.json()) 
+          .then(data => {
+console.log(data)
+            data.forEach(card => {
+              const cardElement = document.createElement('div');
+              cardElement.classList.add('card');
+    
+              cardElement.innerHTML = `
+                <img src="${card.image}" alt="" />
+                <div class="card-info">
+                  <p class="description">${card.category}</p>
+                  <p class="language">${card.topic}</p>
+                  <div class="stars">
+                    ${generateStarsHTML(card.rating)}
+                  </div>
+                  <footer class="card-footer">
+                    <p>Author: ${card.name}</p>
+                  </footer>
+                </div>
+              `;
+              
+              document.querySelector('.cards-container').appendChild(cardElement);
+            });
+          })
+          .catch(error => console.error('Error fetching data:', error));
+    
+        function generateStarsHTML(starIcons) {
+  let starsHTML = '';
+
+  for (let i = 0; i < 5; i++) {
+    if (i < starIcons) {
+      starsHTML += `<ion-icon name="star"></ion-icon>`;
+    } else {
+      starsHTML += '<ion-icon name="star-outline"></ion-icon>';
+    }
+  }
+
+  return starsHTML;
+}
+
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
