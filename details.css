@@ -1,17 +1,19 @@
 main {
   padding: 0;
-  padding-bottom: 5vh;
-  height: 100vh;
   background-color: var(--bg_body);
 }
 
-.detail-content {
+body {
+  height: 100%;
+}
+
+.detail-container {
   position: relative;
 }
 
 .details {
   background-color: #333333;
-  padding: 3vh 3vh 1vh 20vw;
+  padding: 3% 3% 1% 20%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -20,10 +22,12 @@ main {
 .category {
   color: var(--brand-secondary);
   margin: 0;
-  font-size: 1.3vw;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .topic {
+  font-size: 1.2rem;
   font-weight: 700;
   color: #dddddd;
   margin: 0;
@@ -31,7 +35,7 @@ main {
 
 .rating {
   display: flex;
-  font-size: 65%;
+  font-size: 0.8rem;
 }
 
 .rating ion-icon {
@@ -40,95 +44,126 @@ main {
 
 .lang-description {
   color: #dddddd;
-  max-width: 40vw;
-  font-size: 1.3vw;
-  margin-top: 3vh;
+  max-width: 50%;
+  font-size: 1rem;
+  margin-top: 20px;
 }
 
 .detailsCard-container {
   background-color: #ffffff;
   position: absolute;
-  left: 63vw;
-  max-width: 20vw;
-  top: 10%;
+  left: 63%;
+  width: 250px;
+  top: 25px;
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
 }
 
-.card {
+.details-card {
   background-color: #ffffff;
   color: #333333;
+  border-radius: 0%;
 }
 
-.card-info {
-  max-width: 20vw;
-}
-
-.lang-author {
+.headline {
+  margin-left: 13px;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
-.language,
+.details-card-category {
+  font-size: 1rem;
+  font-weight: 700;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.details-card-category,
 .by,
 .author-name {
+  margin-right: 4px;
+}
+
+.by,
+.author-name {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.author-name {
+  display: flex;
+  color: #0768ac;
+  text-decoration: underline;
+  max-width: 50%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.2vw;
-  color: #333333;
 }
 
-.by {
-  margin: 0 0.5vw;
-  font-weight: 700;
-}
-
-.author-name {
-  color: var(--brand-primary);
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-.favourites-container {
-  border: 1px solid #dddddd;
-  padding: 3% 10% 3% 10%;
-  max-width: 13vw;
-  font-size: 1vw;
-  white-space: nowrap;
+.add-favourites-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+.favourites-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dddddd;
+  font-size: 1rem;
+  white-space: nowrap;
   margin-bottom: 10%;
 }
 
-.favourites-container p:first-of-type {
+.favourites-container h4 {
   font-weight: 700;
+  font-size: 0.8rem;
+  position: relative;
+  right: 20px;
+  border: 0;
 }
 
-.favourites-container p:nth-of-type(2) {
+.favourites-container h5 {
   text-align: center;
   color: #dddddd;
 }
 
 .favourites-container button {
   background-color: var(--brand-secondary);
-  width: 15vw;
-  font-size: 1.3vw;
-  padding: 7%;
+  width: 90%;
+  padding: 5% 3% 5% 3%;
+  font-size: 1rem;
   color: #f0f9ff;
 }
 
-.subtopics {
-  width: 40vw;
-  margin-left: 20vw;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
-  background-color: var(--bg_default);
+.favourites-container button ion-icon {
+  font-size: 2rem;
+  margin-left: 5px;
 }
 
-.subtopics p {
+.subtopics {
+  width: 40%;
+  margin-left: 20%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: var(--bg_default);
+  overflow: hidden;
+}
+
+.subtopics h2,
+h4 {
   border: 1px solid var(--lines-color);
-  font-size: 1.2vw;
+  font-size: 1rem;
   border: 1px solid var(--lines-color);
   padding: 3% 0 3% 0;
   margin: 0;
@@ -137,7 +172,7 @@ main {
   font-weight: 400;
 }
 
-.subtopics p:first-of-type {
+.subtopics h2:first-of-type {
   padding-left: 2.2vw;
   font-weight: 700;
   font-size: 1.5vw;
@@ -148,4 +183,35 @@ main {
   padding-left: 2vw;
   padding-right: 1vw;
   font-size: 2vw;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .detail-container {
+    display: block;
+  }
+
+  .lang-description {
+    max-width: 100%;
+  }
+
+  .detailsCard-container {
+    position: relative;
+    top: 10%;
+    margin-top: 50px;
+    left: 10%;
+    width: 80%;
+  }
+
+  .headline {
+    margin-left: 25px;
+  }
+
+  .favourites-container p:first-of-type {
+    font-size: 1.5rem;
+  }
+  .subtopics {
+    width: 90%;
+    margin-left: 1%;
+  }
 }

@@ -18,13 +18,13 @@
     <!-- header -->
     <header>
       <div class="header">
-        <a>Web Topics</a>
+        <h2>Web Topics</h2>
         <div>
           <button class="headerButton" id="darkModeToggle">
             <ion-icon name="moon-outline"></ion-icon
             ><span class="button-text">Dark Mode</span>
           </button>
-          <button class="headerButton">
+          <button class="headerButton" id="favourites">
             <ion-icon name="heart-outline"></ion-icon
             ><span class="button-text">Favourites</span>
           </button>
@@ -37,20 +37,19 @@
     <div class="introduction-section">
       <div class="green-triangle"></div>
       <div class="blue-triangle"></div>
-      <div class="welcome-section">
-        <h1>Welcome to our website!</h1>
-        <h2>We have a new design that's fresh, modern, and easy to use.</h2>
+      <div class="welcome">
+        <div class="welcome-section">
+          <p>Welcome to our website!</p>
+          <h3>We have a new design that's fresh, modern, and easy to use.</h3>
+        </div>
       </div>
     </div>
 
-    <br />
-    <br />
-
     <main>
-      <div class="detail-content">
+      <div class="detail-container">
         <div class="details">
-          <p class="category">Web Development Languages</p>
-          <p class="topic">HTML</p>
+          <h3 class="category">Web Development Languages</h3>
+          <h2 class="topic">HTML</h2>
           <div class="rating">
             <ion-icon name="star"></ion-icon>
             <ion-icon name="star"></ion-icon>
@@ -69,53 +68,58 @@
         </div>
 
         <div class="detailsCard-container">
-          <div class="card">
+          <div class="details-card">
             <img src="logos/html.png" alt="" />
-            <div class="card-info">
-              <p class="lang-author">
-                <span class="language">HTML</span><span class="by"> by</span>
-                <span class="author-name">Sarah Smith </span>
-              </p>
+            <div class="details-card-info">
+              <div class="headline">
+                <p class="lang-author">
+                  <div class="details-card-category">HTML</div>
+                  <div class="by"> by</div>
+                  <div class="author-name">Sarah Smith </div>
+                </p>
+              </div>
+              <div class="add-favourites-container">
               <div class="favourites-container">
-                <p>Interested about this topic?</p>
+                <h4>Interested about this topic?</h4>
                 <button>
                   Add to Favourites <ion-icon name="heart-outline"></ion-icon>
                 </button>
-                <p>Unlimited Credits</p>
+                <h5>Unlimited Credits</h5>
               </div>
+            </div>
             </div>
           </div>
         </div>
 
         <div class="subtopics">
-          <p>HTML Sub Topics</p>
-          <p>
+          <h2>HTML Sub Topics</h2>
+          <h4>
             <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
             and structure
-          </p>
-          <p>
+          </h4>
+          <h4>
             <ion-icon name="checkmark-circle-outline"></ion-icon> HTML elements
             and attributes
-          </p>
-          <p>
+          </h4>
+          <h4>
             <ion-icon name="checkmark-circle-outline"></ion-icon> HTML forms and
             input elements
-          </p>
-          <p>
+          </h4>
+          <h4>
             <ion-icon name="checkmark-circle-outline"></ion-icon> HTML tables
             and lists
-          </p>
-          <p>
+          </h4>
+          <h4>
             <ion-icon name="checkmark-circle-outline"></ion-icon> HTML
             multimedia elements (audio, video, images)
-          </p>
-          <p>
+          </h4>
+          <h4>
             <ion-icon name="checkmark-circle-outline"></ion-icon> HTML
             accessibility and semantic markup
-          </p>
+          </h4>
         </div>
         <footer>
-          Developed with <ion-icon name="heart"></ion-icon> <span>c</span> 2023
+          Developed with <ion-icon name="heart"></ion-icon> <span>&copy;</span> 2023
         </footer>
       </div>
     </main>

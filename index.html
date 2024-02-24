@@ -18,7 +18,7 @@
     <!-- header -->
     <header>
       <div class="header">
-        <a>Web Topics</a>
+        <h2>Web Topics</h2>
         <div>
           <button class="headerButton" id="darkModeToggle">
             <ion-icon name="moon-outline"></ion-icon
@@ -37,17 +37,16 @@
     <div class="introduction-section">
       <div class="green-triangle"></div>
       <div class="blue-triangle"></div>
-      <div class="welcome-section">
-        <h1>Welcome to our website!</h1>
-        <h2>We have a new design that's fresh, modern, and easy to use.</h2>
+      <div class="welcome">
+        <div class="welcome-section">
+          <p>Welcome to our website!</p>
+          <h3>We have a new design that's fresh, modern, and easy to use.</h3>
+        </div>
       </div>
     </div>
 
-    <br />
-    <br />
-
     <main>
-      <form action="" class="search-form">
+      <form class="search-sort-filter-section">
         <div class="search-bar">
           <button type="submit">
             <ion-icon name="search-outline"></ion-icon>
@@ -81,7 +80,7 @@
             <div class="favourite-cards-container">
               <div class="favourite-cards">
                 <img src="logos/ajax.gif" alt="" />
-                <p>HTML</p>
+                <h2>HTML</h2>
                 <div class="favourite-cards-star">
                   <ion-icon name="star"></ion-icon>
                   <ion-icon name="star"></ion-icon>
@@ -93,7 +92,7 @@
 
           <div class="favourite-cards">
             <img src="logos/analytics.png" alt="" />
-            <p>HTML</p>
+            <h2>HTML</h2>
             <div class="favourite-cards-star">
               <ion-icon name="star"></ion-icon>
               <ion-icon name="star"></ion-icon>
@@ -107,7 +106,7 @@
         </section>
 
         <footer>
-          Developed with <ion-icon name="heart"></ion-icon> <span>c</span> 2023
+          Developed with <ion-icon name="heart"></ion-icon> <span>&copy;</span> 2023
         </footer>
 
       </div>
@@ -153,14 +152,14 @@ console.log(data)
               cardElement.innerHTML = `
                 <img src="${card.image}" alt="" />
                 <div class="card-info">
-                  <p class="description">${card.category}</p>
-                  <p class="language">${card.topic}</p>
+                  <h3 class="card-category">${card.category}</h3>
+                  <h2 class="card-topic">${card.topic}</h2>
                   <div class="stars">
                     ${generateStarsHTML(card.rating)}
                   </div>
-                  <footer class="card-footer">
+                  <div class="card-author">
                     <p>Author: ${card.name}</p>
-                  </footer>
+                  </div>
                 </div>
               `;
               
