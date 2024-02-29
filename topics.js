@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cardElement.classList.add("card");
 
       cardElement.innerHTML = `
-              <div>  <img src="logos/${card.image}" alt="" /></div>
+                <img src="logos/${card.image}" alt="" />
                 <div class="card-info">
                   <h3 class="card-category">${card.category}</h3>
                   <h2 class="card-topic">${card.topic}</h2>

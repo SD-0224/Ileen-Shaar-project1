@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const details = document.createElement("div");
     details.classList.add("details");
 
-    //  container.innerHTML = "";
-
     details.innerHTML = `
                         <h3 class="category">${data.category}</h3>
                         <h2 class="topic">${data.topic}</h2>
