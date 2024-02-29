@@ -22,7 +22,7 @@
         <div>
           <button class="headerButton" id="darkModeToggle">
             <ion-icon name="moon-outline"></ion-icon
-            ><span class="button-text">Dark Mode</span>
+            ><span class="button-text" id="buttonText">Dark Mode</span>
           </button>
           <button class="headerButton" id="favourites">
             <ion-icon name="heart-outline"></ion-icon
@@ -46,83 +46,13 @@
     </div>
 
     <main>
-      <div class="detail-container">
-        <div class="details">
-          <h3 class="category">Web Development Languages</h3>
-          <h2 class="topic">HTML</h2>
-          <div class="rating">
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-          </div>
-          <p class="lang-description">
-            HTML (Hypertext Markup Language) is the standard markup language for
-            creating web pages and other information that can be displayed in a
-            web browser. It provides a structure for content and defines how it
-            should be displayed on a web page, including text, images, and
-            multimedia. HTML is essential for creating static web pages and is a
-            foundational technology for the World Wide Web.
-          </p>
-        </div>
+      <div id="loadingIndicator" class="loadingIndicator">Loading...</div>
 
-        <div class="detailsCard-container">
-          <div class="details-card">
-            <img src="logos/html.png" alt="" />
-            <div class="details-card-info">
-              <div class="headline">
-                <p class="lang-author">
-                  <div class="details-card-category">HTML</div>
-                  <div class="by"> by</div>
-                  <div class="author-name">Sarah Smith </div>
-                </p>
-              </div>
-              <div class="add-favourites-container">
-              <div class="favourites-container">
-                <h4>Interested about this topic?</h4>
-                <button>
-                  Add to Favourites <ion-icon name="heart-outline"></ion-icon>
-                </button>
-                <h5>Unlimited Credits</h5>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="subtopics">
-          <h2>HTML Sub Topics</h2>
-          <h4>
-            <ion-icon name="checkmark-circle-outline"></ion-icon> HTML syntax
-            and structure
-          </h4>
-          <h4>
-            <ion-icon name="checkmark-circle-outline"></ion-icon> HTML elements
-            and attributes
-          </h4>
-          <h4>
-            <ion-icon name="checkmark-circle-outline"></ion-icon> HTML forms and
-            input elements
-          </h4>
-          <h4>
-            <ion-icon name="checkmark-circle-outline"></ion-icon> HTML tables
-            and lists
-          </h4>
-          <h4>
-            <ion-icon name="checkmark-circle-outline"></ion-icon> HTML
-            multimedia elements (audio, video, images)
-          </h4>
-          <h4>
-            <ion-icon name="checkmark-circle-outline"></ion-icon> HTML
-            accessibility and semantic markup
-          </h4>
-        </div>
-        <footer>
-          Developed with <ion-icon name="heart"></ion-icon> <span>&copy;</span> 2023
-        </footer>
-      </div>
+      <div class="detail-container"></div>
     </main>
+    <footer>
+      Developed with <ion-icon name="heart"></ion-icon> <span>&copy;</span> 2023
+    </footer>
     <script>
       const darkModeToggle = document.getElementById("darkModeToggle");
       const colorschemeLink = document.getElementById("colorscheme");
@@ -143,5 +73,9 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <script type="module" src="header.js"></script>
+
+    <script type="module" src="details.js"></script>
   </body>
 </html>

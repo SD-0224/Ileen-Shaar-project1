@@ -7,19 +7,19 @@ body {
   color: var(--body-text);
   margin: 0;
   padding: 0;
-  background-color: var(--bg_default);
+  background-color: var(--bg_body);
 }
 
 main {
-  background-color: var(--bg_body);
-  padding: 25px 60px 25px 60px;
+  padding: 0.7% 3.5% 0.7%;
 }
 
 .header {
+  background-color: var(--bg_default);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.7% 3.5% 0.7%;
+  padding: 0.7% 3.5% 0.7%;
 }
 
 .header h2 {
@@ -47,15 +47,16 @@ button ion-icon {
 
 .introduction-section {
   position: relative;
-  height: 5vw;
-  margin-bottom: 50px;
+  height: 9vw;
+  background-color: var(--bg_default);
+  margin-bottom: 1vw;
 }
 
 .blue-triangle {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 65%;
   background: linear-gradient(
     to right,
     var(--brand-primary),
@@ -68,7 +69,7 @@ button ion-icon {
   position: absolute;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 65%;
   background: var(--brand-secondary);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
 }
@@ -78,8 +79,8 @@ button ion-icon {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 90%;
   line-height: 20px;
+  top: 50%;
 }
 
 .welcome-section {
@@ -169,6 +170,7 @@ select {
   color: var(--body-text);
   font-family: "Nunito Sans", sans-serif;
   border: 0;
+  outline: none;
   width: 100%;
   padding: 19px 10px 10px 5.5px;
   font-weight: 400;
@@ -181,10 +183,19 @@ label {
   padding: 10px 0 0 10px;
 }
 
+.loadingIndicator {
+  display: none;
+  text-align: center;
+  color: var(--body-text);
+  font-size: 2.5rem;
+  padding: 40px;
+  margin: 20px;
+}
+
 .cards-container {
   margin-top: 5%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   grid-gap: 20px;
   width: 100%;
   margin-bottom: 20px;
@@ -198,12 +209,14 @@ label {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  text-decoration: none;
 }
 
 img {
   width: 100%;
   height: 145px;
   object-fit: cover;
+  background-color: #ffffff;
 }
 
 .card-info {
@@ -245,6 +258,17 @@ img {
 .card-author {
   color: #b3b2b2;
   font-size: 0.9rem;
+}
+
+.errorLoadingMsg {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: var(--body-text);
+  border: 2px solid;
+  color: #d8000c;
+  background-color: #ffc7c7;
+  margin-bottom: 100px;
 }
 
 .favourites-section {
@@ -326,6 +350,10 @@ footer span {
 }
 
 @media (max-width: 700px) {
+  .header {
+    padding: 10px 30px 10px 30px;
+  }
+
   .header ion-icon {
     margin-right: 0;
     padding: 5px;
@@ -341,29 +369,33 @@ footer span {
   }
 
   .introduction-section {
-    margin-bottom: 80px;
+    height: 100px;
+    padding-bottom: 10vw;
+  }
+
+  .blue-triangle {
+    height: 35%;
+  }
+
+  .green-triangle {
+    height: 35%;
   }
 
   .welcome {
-    top: 100%;
-    margin-bottom: 20px;
+    padding: 25px 30px 0px 30px;
+    justify-content: flex-start;
   }
 
   .welcome-section {
-    position: absolute;
-    top: 100%;
-    left: 5%;
     max-width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
   }
-
   .welcome-section h3 {
     line-height: 4vw;
     text-wrap: wrap;
+    font-size: 0.9rem;
   }
   main {
-    padding: 25px 30px 25px 30px;
+    padding: 15px 30px 25px 30px;
   }
 
   .search-sort-filter-section {
@@ -397,10 +429,5 @@ footer span {
 
   .card {
     margin-bottom: 50px;
-  }
-
-  .cards-container p,
-  .card-footer {
-    font-size: 2rem;
   }
 }

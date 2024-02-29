@@ -125,7 +125,7 @@ body {
   margin-bottom: 10%;
 }
 
-.favourites-container h4 {
+.favourites-container ul {
   font-weight: 700;
   font-size: 0.8rem;
   position: relative;
@@ -158,10 +158,11 @@ body {
   margin-bottom: 3%;
   background-color: var(--bg_default);
   overflow: hidden;
+  list-style-type: none;
 }
 
 .subtopics h2,
-h4 {
+ul {
   border: 1px solid var(--lines-color);
   font-size: 1rem;
   border: 1px solid var(--lines-color);

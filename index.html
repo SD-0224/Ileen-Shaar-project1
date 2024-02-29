@@ -22,7 +22,7 @@
         <div>
           <button class="headerButton" id="darkModeToggle">
             <ion-icon name="moon-outline"></ion-icon
-            ><span class="button-text">Dark Mode</span>
+            ><span class="button-text" id="buttonText">Dark Mode</span>
           </button>
           <button class="headerButton" id="favourites">
             <ion-icon name="heart-outline"></ion-icon
@@ -33,7 +33,6 @@
     </header>
 
     <!-- Introduction Section -->
-
     <div class="introduction-section">
       <div class="green-triangle"></div>
       <div class="blue-triangle"></div>
@@ -43,7 +42,7 @@
           <h3>We have a new design that's fresh, modern, and easy to use.</h3>
         </div>
       </div>
-    </div>
+  </div>
 
     <main>
       <form class="search-sort-filter-section">
@@ -51,29 +50,32 @@
           <button type="submit">
             <ion-icon name="search-outline"></ion-icon>
           </button>
-          <input type="text" placeholder="Search the website..." />
+          <input id="searchInput" type="text" placeholder="Search the website..." />
         </div>
 
         <div class="dropDown">
-          <button class="sort-by">
+          <div class="sort-by">
             <label>Sort By:</label>
-            <select name="sort">
+            <select name="sort" id="sort">
               <option value="Default">Default</option>
+              <option value="topic">Topic</option>
+              <option value="name">Author</option>
             </select>
-          </button>
+          </div>
 
-          <button class="filter-by">
+          <div class="filter-by">
             <label>Filter By:</label>
-            <select name="filter">
+            <select name="filter" id="filter">
               <option value="Default">Default</option>
             </select>
-          </button>
+          </div>
         </div>
       </form>
 
-      <div class="cards-container">
-      
-        </div>
+      <div id="loadingIndicator" class="loadingIndicator">Loading...</div>
+
+
+      <div class="cards-container"></div>
 
         <section class="favourites-section" id="favourites-section">
             <div>My Favourite Topics</div>
@@ -105,13 +107,14 @@
             
         </section>
 
-        <footer>
-          Developed with <ion-icon name="heart"></ion-icon> <span>&copy;</span> 2023
-        </footer>
+        
 
       </div>
     </main>
-    <script>
+    <footer>
+      Developed with <ion-icon name="heart"></ion-icon> <span>&copy;</span> 2023
+    </footer>
+    <!-- <script>
       const darkModeToggle = document.getElementById('darkModeToggle');
       const colorschemeLink = document.getElementById('colorscheme');
   
@@ -122,9 +125,9 @@
           colorschemeLink.setAttribute('href', 'light-colors.css');
         }
       });
-    </script>
+    </script> -->
 
-<script>
+<!-- <script>
   const favouritesButton = document.getElementById('favourites');
 
 const favouritesSection = document.getElementById('favourites-section');
@@ -137,14 +140,14 @@ favouritesButton.addEventListener('click', () => {
   }
 });
 
-</script>
+</script> -->
 
-    <script>
+    <!-- <script>
       document.addEventListener('DOMContentLoaded', function() {
         fetch('data/topics.json')
           .then(response => response.json()) 
           .then(data => {
-console.log(data)
+// console.log(data)
             data.forEach(card => {
               const cardElement = document.createElement('div');
               cardElement.classList.add('card');
@@ -183,7 +186,7 @@ console.log(data)
 }
 
       });
-    </script>
+    </script> -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -192,5 +195,10 @@ console.log(data)
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <script type="module" src="header.js"></script>
+
+    <script type="module" src="topics.js"></script>
+
   </body>
 </html>
