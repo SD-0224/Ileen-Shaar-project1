@@ -8,7 +8,11 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="light-colors.css" id="colorscheme" />
+    <link
+      rel="stylesheet"
+      href="colorModes/light-colors.css"
+      id="colorscheme"
+    />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="details.css" />
     <title>TAP-Project1</title>
@@ -49,22 +53,16 @@
       <div id="loadingIndicator" class="loadingIndicator">Loading...</div>
 
       <div class="detail-container"></div>
+
+      <section class="favourites-section" id="favourites-section">
+        <div>My Favourite Topics</div>
+        <div class="favourite-cards-container"></div>
+      </section>
     </main>
     <footer>
       Developed with <ion-icon name="heart"></ion-icon> <span>&copy;</span> 2023
     </footer>
-    <script>
-      const darkModeToggle = document.getElementById("darkModeToggle");
-      const colorschemeLink = document.getElementById("colorscheme");
 
-      darkModeToggle.addEventListener("click", () => {
-        if (colorschemeLink.getAttribute("href") === "light-colors.css") {
-          colorschemeLink.setAttribute("href", "dark-colors.css");
-        } else {
-          colorschemeLink.setAttribute("href", "light-colors.css");
-        }
-      });
-    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -73,6 +71,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script type="module" src="components/addRemoveFavourites.js"></script>
 
     <script type="module" src="header.js"></script>
 

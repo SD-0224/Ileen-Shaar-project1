@@ -277,10 +277,16 @@ img {
   bottom: 0;
   left: 0;
   background-color: var(--bg_default);
-  height: 150px;
+  height: fit-content;
+  max-height: 50%;
+  overflow-y: auto;
   display: none;
   flex-direction: column;
   padding: 15px 15px 5px 50px;
+}
+
+ion-icon[name="sunny-outline"] {
+  color: yellow;
 }
 
 .favourites-section div:first-child {
@@ -290,7 +296,9 @@ img {
 }
 
 .favourite-cards-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 7px;
 }
 
 .favourite-cards {
