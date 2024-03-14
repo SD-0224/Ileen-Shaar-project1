@@ -1,0 +1,23 @@
+.favouritesSection {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-default);
+  height: fit-content;
+  max-height: 50%;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.favouritesSection div:first-child {
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.favouriteCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 7px;
+}

@@ -1,0 +1,10 @@
+.searchSortFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px var(--lines-color);
+  border-radius: 8px;
+  height: 45px;
+  box-sizing: border-box;
+  background-color: var(--bg-default);
+}

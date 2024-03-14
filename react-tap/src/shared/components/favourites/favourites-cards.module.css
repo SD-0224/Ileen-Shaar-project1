@@ -1,0 +1,32 @@
+.favouriteCards {
+  height: 90px;
+  width: 100px;
+  border-radius: 6px;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 5px var(--lines-color);
+}
+
+.favouriteCards img {
+  height: 50px;
+  margin: 0;
+}
+
+.favouriteCards h2 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 1px;
+  margin-left: 5%;
+  max-width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.favouriteCardsStars {
+  display: flex;
+  margin-left: 5%;
+  color: orange;
+  font-size: 0.7rem;
+}

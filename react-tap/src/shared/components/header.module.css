@@ -1,0 +1,20 @@
+.header {
+  background-color: var(--bg-default);
+  box-shadow: 0 0 10px -5px rgb(0, 0, 0, 0.3);
+}
+
+.headerContiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  color: var(--brand-primary);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.nav :first-child {
+  margin-right: 5px;
+}

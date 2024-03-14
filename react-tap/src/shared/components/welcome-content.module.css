@@ -1,0 +1,23 @@
+.welcomeSection {
+  max-width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.welcomeSection p,
+.welcomeSection h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.welcomeSection p {
+  color: var(--brand-secondary);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.welcomeSection h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+}

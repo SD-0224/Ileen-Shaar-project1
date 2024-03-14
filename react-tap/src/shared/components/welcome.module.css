@@ -1,0 +1,15 @@
+.welcomeContainer {
+  position: relative;
+  height: 9vw;
+  background-color: var(--bg-default);
+  margin-bottom: 1vw;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  line-height: 20px;
+  top: 50%;
+}

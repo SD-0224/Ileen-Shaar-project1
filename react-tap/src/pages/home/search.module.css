@@ -1,0 +1,21 @@
+input {
+  border: 0;
+  color: var(--body-text);
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+
+.searchBar {
+  border: 0;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 30px;
+}
+
+.searchBar ion-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  padding: 0 8px 4px 10px;
+}

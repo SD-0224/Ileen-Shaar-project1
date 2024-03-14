@@ -1,0 +1,107 @@
+.detailsCardContainer {
+  background-color: #ffffff;
+  position: absolute;
+  left: 63%;
+  width: 250px;
+  top: 25px;
+  border: 0;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.detailsCard {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 0%;
+}
+
+.headline {
+  margin-left: 13px;
+}
+
+.langAuthor {
+  padding: 5%;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.detailsCardCategory {
+  font-size: 1rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detailsCardCategory,
+.by,
+.authorName {
+  margin-right: 4px;
+}
+
+.by,
+.authorName {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.authorName {
+  display: flex;
+  color: #0768ac;
+  text-decoration: underline;
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.addFavouritesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.favouritesContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dddddd;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-bottom: 10%;
+}
+
+.favouritesContainer h5 {
+  text-align: center;
+  color: #dddddd;
+}
+
+.favouritesContainer h4 {
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: relative;
+  right: 20px;
+  border: 0;
+}
+
+.favouritesContainer button {
+  background-color: var(--brand-secondary);
+  width: 90%;
+  padding: 5% 3% 5% 3%;
+  font-size: 0.8rem;
+  color: #f0f9ff;
+  border: 0;
+}
+
+.favouritesContainer button ion-icon {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
